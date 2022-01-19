@@ -1,0 +1,58 @@
+<%- include('./partials/header.ejs')%>
+<%- include('./partials/navbar.ejs')%>
+    <div class="container">
+        <div class="row mt-5">
+            <h1>Registration Page</h1>
+            <hr>
+            <form action="/register" method="post">
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" required id="fname" name="fname">
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" required id="lname" name="lname">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" required id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" value="male" type="radio" required name="gender" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      MALE
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" value="female" type="radio" required name="gender" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      FEMALE
+                    </label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone No.</label>
+                    <input type="tel" class="form-control" required id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">age</label>
+                    <input type="text" class="form-control" required id="age" name="age">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" required id="password" name="password">
+                </div>
+                <div class="mb-3">
+                    <label for="cpassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" required id="cpassword" name="cpassword">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+                
+        </div>
+    </div>
+    
+<%- include('./partials/footer.ejs')%>
